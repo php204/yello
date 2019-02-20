@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./Public/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+     
+     <div class="container">
+     	  <h1 class="text-center text-info">{$title}</h1>
+
+	     	 <table class="table table-bordered table-hover">
+			    <tr>
+                   <th>ID</th>
+                   <th>用户</th>
+                   <th>电话</th>
+                   <th>邮件</th>
+                   <th>操作</th>
+			    </tr>
+			    {foreach $data as $k=>$v}
+				    <tr>
+	                   <td>{$v['id']}</td>
+	                   <td>{$v['user']}</td>
+	                   <td>{$v['phone']}</td>
+	                   <td>{$v['email']}</td>
+	                   <td>
+                           <a href="index.php?m=admin&c=user&a=edit&id={$v['id']}">修改</a>
+                           <a href="index.php?m=admin&c=user&a=delete&id={$v['id']}">删除</a>
+	                   </td>
+				    </tr>
+			    {/foreach}
+			</table>
+     </div>
+     
+</body>
+</html>
