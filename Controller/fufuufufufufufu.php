@@ -5,7 +5,7 @@ use Admin\CommonsController;
 		
 		public function index(){
              
-             $data=$this->redis->lrange('user_list',0,-1);
+             $data=$this->redis2222->lrange('user_list',0,-1);
                   $temp=[];
              foreach ($data as $key => $value) {
                   $temp[]=$this->redis->hmget($value,['id','user','phone','email']);
