@@ -3,7 +3,7 @@ use Admin\CommonsController;
 	class UserController extends CommonsController
 	{
 		
-		public function index(){
+		public function index4(){
              
              $data=$this->redis->lrange('user_list',0,-1);
                   $temp=[];
